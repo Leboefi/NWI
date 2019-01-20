@@ -1508,12 +1508,6 @@ input, select, textarea {
 			width: 100%;
 			margin: 0 0 3.5em 0;
 		}
-
-.image.windsor {
-			display: block;
-			width: 30%;
-			margin: 0 0 3.5em 0;
-		}
 		.image.left {
 			float: left;
 			margin: 0 1.5em 1.5em 0;
