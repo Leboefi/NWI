@@ -1,5 +1,5 @@
 ﻿<?php
-$remitente = $_POST['email'];
+$remitente = $_POST['mail'];
 $destinatario = 'windsor@NewWorldInsight.com'; // en esta línea va el mail del destinatario.
 $asunto = 'Windsor Insights Contact Form'; // acá se puede modificar el asunto del mail
 if (!$_POST){
@@ -8,9 +8,9 @@ if (!$_POST){
 <?php
 }else{
 	 
-    $cuerpo = "Name: " . $_POST["name"] . "\r\n"; 
-    $cuerpo .= "Email: " . $_POST["email"] . "\r\n";
-	$cuerpo .= "Message: " . $_POST["message"] . "\r\n";
+    $cuerpo = "Name: " . $_POST["who"] . "\r\n"; 
+    $cuerpo .= "Email: " . $_POST["mail"] . "\r\n";
+	$cuerpo .= "Message: " . $_POST["mes"] . "\r\n";
 	//las líneas de arriba definen el contenido del mail. Las palabras que están dentro de $_POST[""] deben coincidir con el "name" de cada campo. 
 	// Si se agrega un campo al formulario, hay que agregarlo acá.
 
@@ -19,7 +19,7 @@ if (!$_POST){
     $headers .= "X-Priority: 3\n";
     $headers .= "X-MSMail-Priority: Normal\n";
     $headers .= "X-Mailer: php\n";
-    $headers .= "From: \"".$_POST['nombre']." ".$_POST['apellido']."\" <".$remitente.">\n";
+    $headers .= "From: \"".$_POST['who']." \" <".$remitente.">\n";
 
     mail($destinatario, $asunto, $cuerpo, $headers);
     
